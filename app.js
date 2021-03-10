@@ -2,7 +2,13 @@ const App = {
 data() {
   return {
     title: 'List',
-    placeholderString: 'write here'
+    placeholderString: 'write here',
+    inputValue: ""
+  }
+},
+methods: {
+  inputChangeHandler(e) {
+    this.inputValue = e.target.value
   }
 }
 }
