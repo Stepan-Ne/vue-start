@@ -12,8 +12,8 @@
       <div class="card center">
         <h2>{{ title }}: {{ counter }}</h2>
         <div class="btns">
-          <button>ADD</button>
-          <button>SUBTRACT</button>
+          <button v-on:click="counter++">ADD</button>
+          <button v-on:click="counter--">SUBTRACT</button>
         </div>
       </div>
     </div>
