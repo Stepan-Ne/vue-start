@@ -1,8 +1,8 @@
 const App = {
 data() {
   return {
-    counter: 1,
-    title: 'Count'
+    title: 'List',
+    placeholderString: 'write here'
   }
 }
 }

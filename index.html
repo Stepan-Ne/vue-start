@@ -9,11 +9,13 @@
   </head>
   <body>
     <div class="container" id="counter">
-      <div class="card center">
-        <h2>{{ title }}: {{ counter }}</h2>
+      <div class="card">
+        <h2>{{ title }}</h2>
+        <div class="form-control">
+          <input type="text" v-bind:placeholder="placeholderString"/>
+        </div>
         <div class="btns">
-          <button v-on:click="counter++">ADD</button>
-          <button v-on:click="counter--">SUBTRACT</button>
+          <button>Add</button>
         </div>
       </div>
     </div>
