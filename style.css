@@ -31,3 +31,10 @@
   width: 100%;
 
 }
+
+.primary {
+  color: green;
+}
+.second {
+  font-size: 2rem;;
+}
