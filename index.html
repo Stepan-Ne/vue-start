@@ -10,7 +10,7 @@
   <body>
     <div class="container" id="counter">
       <div class="card">
-        <h2>{{ title }}</h2>
+        <h2 :style="{color: inputValue.length > 5 ? 'darkred' : 'darkblue'}">{{ title }}</h2>
         <div class="form-control">
           <input type="text" 
          :placeholder="placeholderString"
@@ -30,6 +30,7 @@
         </ul>
         <p v-else>There is no note</p>
       </div>
+      Double: {{doubleCount}}
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>

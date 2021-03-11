@@ -28,6 +28,17 @@ methods: {
   upperCase(item) {
     return item.toUpperCase()
   }
+},
+computed: {
+doubleCount() {
+  
+  return this.notes.length * 2
+}
+},
+watch: {
+  inputValue(value) {
+    console.log(value)
+  }
 }
 
 }
