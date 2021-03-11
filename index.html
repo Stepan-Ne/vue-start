@@ -13,14 +13,22 @@
         <h2>{{ title }}</h2>
         <div class="form-control">
           <input type="text" 
-          v-bind:placeholder="placeholderString"
-          v-bind:value="inputValue"
-          v-on:input="inputChangeHandler"/>
+         :placeholder="placeholderString"
+          :value="inputValue"
+          @input="inputChangeHandler"
+         @keypress.enter="addNote"/>
+          <p v-if="fieldFlag">{{requireField}}</p>
         </div>
         <h3>Value: {{ inputValue }}</h3>
         <div class="btns">
-          <button>Add</button>
+          <button @click="addNote">Add</button>
         </div>
+        <ul v-if="notes.length !== 0">
+          <li v-for="(myNote, id) in notes">({{id}}){{ upperCase(myNote) }}
+             <button v-on:click="removeNote(id)">delete</button></li>
+          
+        </ul>
+        <p v-else>There is no note</p>
       </div>
     </div>
 
